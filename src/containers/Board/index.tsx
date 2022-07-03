@@ -6,7 +6,10 @@ import { Container } from "./styles";
 export const Board: React.FC = () => {
   return (
     <Container>
-      <BoardTile />
+      <BoardTile title="Pending" />
+      <BoardTile title="In Progress" />
+      <BoardTile title="Review" />
+      <BoardTile title="Done" />
     </Container>
   );
 };

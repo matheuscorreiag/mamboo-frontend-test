@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 15px;
   border-radius: 14px;
+  padding: 5px;
   width: 200px;
-  height: 100px;
-  background-color: red;
+  height: 150px;
+  background-color: pink;
 `;

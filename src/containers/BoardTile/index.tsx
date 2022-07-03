@@ -1,15 +1,40 @@
-import React from 'react';
-import { BoardTitle } from '../../components/BoardTitle';
-import { Card } from '../Card';
+import React from "react";
+import { BoardTileCreateCard } from "../../components/BoardTileCreateCard";
+import { BoardTileTitle } from "../../components/BoardTileTitle";
+import { Card } from "../Card";
 
-import { Container } from './styles';
+import {
+  BoardFooterContainer,
+  BoardHeaderContainer,
+  CardsContainer,
+  Container,
+} from "./styles";
 
-export const BoardTile: React.FC = () => {
+interface BoardTileProps {
+  title: string;
+}
+
+export const BoardTile: React.FC<BoardTileProps> = ({ title }) => {
   return (
     <Container>
-      <BoardTitle/>
-      <Card/>
-      <Card/>
+      <BoardHeaderContainer>
+        <BoardTileTitle title={title} />
+      </BoardHeaderContainer>
+      <CardsContainer>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </CardsContainer>
+      <BoardFooterContainer>
+        <BoardTileCreateCard />
+      </BoardFooterContainer>
     </Container>
   );
 };

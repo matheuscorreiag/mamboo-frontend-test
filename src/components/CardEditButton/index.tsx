@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { CloseEditIcon, Container, EditIcon } from "./styles";
 
-export const CardEditButton: React.FC<{ cardId: string }> = ({ cardId }) => {
-  // const dispatch = useDispatch();
-  // const { isEditing } = useSelector((state: any) => state.card);
+interface CardEditButtonProps {
+  cardId: string;
+  isEditing: boolean;
+  handleIsEditing: () => void;
+}
 
-  const [isEditing, setIsEditing] = useState(false);
-
+export const CardEditButton: React.FC<CardEditButtonProps> = ({
+  cardId,
+  isEditing,
+  handleIsEditing,
+}) => {
   const toggleIsEditing = () => {
-    setIsEditing(!isEditing);
-    // dispatch(actions.isEditing(1));
+    handleIsEditing();
   };
 
   return (

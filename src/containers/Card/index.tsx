@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CardDescription } from "../../components/CardDescription";
 import { CardEditButton } from "../../components/CardEditButton";
 
@@ -11,10 +11,12 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ cardId, description }) => {
+  const [isEditing, setIsEditing] = useState(false);
+
   return (
-    <Container>
-      <CardEditButton cardId={cardId} />
-      <CardDescription description={description} />
+    <Container isEditing={isEditing}>
+      <CardEditButton cardId={cardId} handleIsEditing={() => setIsEditing(!isEditing)} isEditing={isEditing} />
+      <CardDescription description={description} isEditing={isEditing} cardId={cardId} />
     </Container>
   );
 };

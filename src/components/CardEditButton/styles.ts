@@ -13,6 +13,7 @@ export const EditIcon = styled(Pencil)<EditButtonsProps>`
   display: ${(props) => (props.editing ? "none" : "block")};
   position: absolute;
   right: 0;
+  z-index: 100;
 
   :hover {
     opacity: 0.5;
@@ -20,6 +21,7 @@ export const EditIcon = styled(Pencil)<EditButtonsProps>`
 `;
 export const CloseEditIcon = styled(X)<EditButtonsProps>`
   display: ${(props) => (props.editing ? "block" : "none")};
+  z-index: 100;
   position: absolute;
   right: 0;
   :hover {

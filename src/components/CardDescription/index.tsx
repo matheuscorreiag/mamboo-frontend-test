@@ -1,9 +1,27 @@
 import React from "react";
+import { CardEdition } from "../CardEdition";
 
 import { Description } from "./styles";
 
-export const CardDescription: React.FC<{ description: string }> = ({
+interface CardDescriptionProps {
+  description: string;
+  isEditing: boolean;
+  cardId: string;
+}
+export const CardDescription: React.FC<CardDescriptionProps> = ({
   description,
+  isEditing,
+  cardId,
 }) => {
-  return <Description>{description}</Description>;
+  return (
+    <>
+      <Description isEditing={isEditing}>{description}</Description>
+
+      {isEditing && (
+        <>
+          <CardEdition />
+        </>
+      )}
+    </>
+  );
 };

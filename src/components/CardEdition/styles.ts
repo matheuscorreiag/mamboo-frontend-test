@@ -4,13 +4,12 @@ export const Container = styled.div`
   height: 90%;
 `;
 export const CardEditTextArea = styled.textarea`
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 80%;
-  resize: none;
+  width: 90%;
+  height: 75%;
   font-size: 12px;
   border-radius: 14px;
+  margin: 20px 5px;
+  padding: 5px;
 
   outline: solid 3px #e6e6e6;
 

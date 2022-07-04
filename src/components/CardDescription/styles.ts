@@ -8,5 +8,11 @@ export const Description = styled.h2<Props>`
   font-size: 13px;
   font-weight: 400;
   margin: 20px;
-`;
+  word-wrap: break-word;
+  height: 120px;
+  overflow: scroll;
 
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+`;

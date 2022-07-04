@@ -5,12 +5,7 @@ import { BoardTileTitle } from "../../components/BoardTileTitle";
 import { CardState } from "../../store/card/types";
 import { Card } from "../Card";
 
-import {
-  BoardFooterContainer,
-  BoardHeaderContainer,
-  CardsContainer,
-  Container,
-} from "./styles";
+import { BoardHeaderContainer, CardsContainer, Container } from "./styles";
 
 interface BoardTileProps {
   title: string;
@@ -42,9 +37,7 @@ export const BoardTile: React.FC<BoardTileProps> = ({ title, tasks }) => {
           })}
         <BoardTileHiddenCard isCreating={isCreatingCard} />
       </CardsContainer>
-      <BoardFooterContainer>
-        <BoardTileCreateCardButton onClick={handleCreateCard} />
-      </BoardFooterContainer>
+      <BoardTileCreateCardButton onClick={handleCreateCard} />
     </Container>
   );
 };

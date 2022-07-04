@@ -7,7 +7,6 @@ export const AppContainer = styled.div`
 
   width: 100%;
   height: 100%;
-  padding: 20px 0px;
 
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.fontColor};

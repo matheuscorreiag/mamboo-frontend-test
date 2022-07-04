@@ -1,7 +1,7 @@
 import { Plus } from "phosphor-react";
 import React from "react";
 
-import { Container, CreateCardLabel } from "./styles";
+import { Container, CreateCardButton, CreateCardLabel } from "./styles";
 
 interface BoardTileCreateCardButtonProps {
   onClick: () => void;
@@ -12,8 +12,10 @@ export const BoardTileCreateCardButton: React.FC<
 > = ({ onClick }) => {
   return (
     <Container onClick={onClick}>
-      <Plus />
-      <CreateCardLabel>Add a new card</CreateCardLabel>
+      <CreateCardButton onClick={() => console.log("clicado")}>
+        <Plus />
+        <CreateCardLabel>Add a new card</CreateCardLabel>
+      </CreateCardButton>
     </Container>
   );
 };

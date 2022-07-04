@@ -13,5 +13,16 @@ export const cardSlice = createSlice({
     getCards: (state) => {
       return state;
     },
+    updateCard: (state, action) => {
+      return state.map((card) => {
+        if (card.id === action.payload.id) {
+          return action.payload;
+        }
+        return card;
+      });
+    },
+    deleteCard: (state, action) => {
+      return state.filter((card) => card.id !== action.payload);
+    },
   },
 });

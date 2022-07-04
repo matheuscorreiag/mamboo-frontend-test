@@ -6,6 +6,11 @@ interface UpdateTask {
   description?: string;
 }
 
+interface CreateTask {
+  description: string;
+  status: string;
+}
+
 export const fetchTasks = () => {
   return async (dispatch: AppDispatch) => {
     return await api
@@ -27,5 +32,13 @@ export const fetchDeleteTask = ({ id }: UpdateTask) => {
     return await api
       .delete(`tasks/${id}`)
       .then((res) => dispatch(actions.deleteCard(id)));
+  };
+};
+
+export const fetchCreateTask = (data: CreateTask) => {
+  return async (dispatch: AppDispatch) => {
+    return await api
+      .post("tasks", data)
+      .then((res) => dispatch(actions.addCard(res.data)));
   };
 };

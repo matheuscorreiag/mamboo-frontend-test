@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AnyAction } from "redux";
 import { useAppDispatch } from "../../hooks/redux";
 import { fetchDeleteTask, fetchUpdateTask } from "../../store/card/actions";
-import { CardEditSaveDeleteButtons } from "../CardEditSaveDeleteButtons";
+import { CardEditSaveDeleteButtons } from "../../components/CardEditSaveDeleteButtons";
 
 import { CardEditTextArea, Container } from "./styles";
 

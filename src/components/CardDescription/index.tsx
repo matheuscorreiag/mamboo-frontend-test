@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CardEdition } from "../CardEdition";
+import { CardEdition } from "../../containers/CardEdition";
 
 import { Description } from "./styles";
 

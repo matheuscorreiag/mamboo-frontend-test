@@ -4,11 +4,17 @@ import { CardTitle } from "../../components/CardTitle";
 
 import { Container } from "./styles";
 
-export const Card: React.FC = () => {
+interface CardProps {
+  cardId: string;
+  title: string;
+  description: string;
+}
+
+export const Card: React.FC<CardProps> = ({ cardId, title, description }) => {
   return (
     <Container>
-      <CardTitle />
-      <CardDescription />
+      <CardTitle cardId={cardId} title={title} />
+      <CardDescription description={description} />
     </Container>
   );
 };

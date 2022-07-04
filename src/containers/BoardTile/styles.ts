@@ -12,6 +12,9 @@ export const Container = styled.div`
   border-radius: 14px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   max-height: 800px;
+
+  min-height: 200px;
+  min-width: 250px;
 `;
 export const CardsContainer = styled.div`
   height: 100%;

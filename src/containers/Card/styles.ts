@@ -5,5 +5,5 @@ export const Container = styled.div`
   padding: 5px;
   width: 200px;
   height: 150px;
-  background-color: pink;
+  background-color: #531cb3;
 `;

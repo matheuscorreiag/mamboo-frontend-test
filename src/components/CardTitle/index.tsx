@@ -1,11 +1,17 @@
-import React from 'react';
-import { Title } from './styles';
+import React from "react";
+import { CardEditButton } from "../CardEditButton";
+import { Container, Title } from "./styles";
 
+interface CardTitleProps {
+  cardId: string;
+  title: string;
+}
 
-export const CardTitle: React.FC = () => {
+export const CardTitle: React.FC<CardTitleProps> = ({ cardId, title }) => {
   return (
-    <Title>
-      CardTitle
-    </Title>
+    <Container>
+      <Title>{title}</Title>
+      <CardEditButton cardId={cardId} />
+    </Container>
   );
 };

@@ -3,9 +3,15 @@ import React from "react";
 
 import { Container, CreateCardLabel } from "./styles";
 
-export const BoardTileCreateCard: React.FC = () => {
+interface BoardTileCreateCardButtonProps {
+  onClick: () => void;
+}
+
+export const BoardTileCreateCardButton: React.FC<
+  BoardTileCreateCardButtonProps
+> = ({ onClick }) => {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <Plus />
       <CreateCardLabel>Add a new card</CreateCardLabel>
     </Container>

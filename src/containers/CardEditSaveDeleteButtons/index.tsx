@@ -1,5 +1,5 @@
 import React from "react";
-import { SaveButton } from "../../SaveButton";
+import { SaveButton } from "../../components/SaveButton";
 import { DeleteButton } from "../../components/DeleteButton";
 
 import { Container } from "./styles";

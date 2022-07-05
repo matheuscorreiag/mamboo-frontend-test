@@ -15,7 +15,7 @@ export const fetchTasks = () => {
   return async (dispatch: AppDispatch) => {
     return await api
       .get("tasks")
-      .then((res) => dispatch(actions.addCards(res.data)));
+      .then((res) => dispatch(actions.addApiCards(res.data)));
   };
 };
 
@@ -39,6 +39,6 @@ export const fetchCreateTask = (data: CreateTask) => {
   return async (dispatch: AppDispatch) => {
     return await api
       .post("tasks", data)
-      .then((res) => dispatch(actions.addCard(res.data)));
+      .then((res) => dispatch(actions.addNewCard(res.data)));
   };
 };

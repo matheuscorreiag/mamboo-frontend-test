@@ -1,6 +1,8 @@
 import React from "react";
+import { SaveButton } from "../../SaveButton";
+import { DeleteButton } from "../../components/DeleteButton";
 
-import { Container, DeleteCardButton, SaveEditButton } from "./styles";
+import { Container } from "./styles";
 
 interface CardEditSaveDeleteButtonsProps {
   onDeleteCard: () => void;
@@ -12,8 +14,8 @@ export const CardEditSaveDeleteButtons: React.FC<
 > = ({ onDeleteCard, onSaveEdit }) => {
   return (
     <Container>
-      <SaveEditButton onClick={() => onSaveEdit()}>Save</SaveEditButton>
-      <DeleteCardButton onClick={() => onDeleteCard()}>Delete</DeleteCardButton>
+      <SaveButton onSave={onSaveEdit} />
+      <DeleteButton onDelete={onDeleteCard} />
     </Container>
   );
 };

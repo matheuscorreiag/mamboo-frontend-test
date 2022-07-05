@@ -3,7 +3,10 @@ import api from "../../services/api";
 
 interface UpdateTask {
   id: string;
-  description?: string;
+  data?: {
+    description?: string;
+    status?: string;
+  };
 }
 
 interface CreateTask {
@@ -19,10 +22,10 @@ export const fetchTasks = () => {
   };
 };
 
-export const fetchUpdateTask = ({ id, description }: UpdateTask) => {
+export const fetchUpdateTask = (data: UpdateTask) => {
   return async (dispatch: AppDispatch) => {
     return await api
-      .put(`tasks/${id}`, { description })
+      .put(`tasks/${data.id}`, data.data)
       .then((res) => dispatch(actions.updateCard(res.data)));
   };
 };

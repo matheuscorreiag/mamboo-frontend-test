@@ -14,10 +14,14 @@ export const Board: React.FC = () => {
 
   return (
     <Container>
-      <BoardTile title="Pending" tasks={pendingTasks} status='PENDING' />
-      <BoardTile title="In Progress" tasks={inProgressTasks}  status='IN_PROGRESS'/>
-      <BoardTile title="Review" tasks={reviewTasks} status='REVIEW'/>
-      <BoardTile title="Done" tasks={doneTasks} status='DONE'/>
+      <BoardTile title="Pending" tasks={pendingTasks} status="PENDING" />
+      <BoardTile
+        title="In Progress"
+        tasks={inProgressTasks}
+        status="IN_PROGRESS"
+      />
+      <BoardTile title="Review" tasks={reviewTasks} status="REVIEW" />
+      <BoardTile title="Done" tasks={doneTasks} status="DONE" />
     </Container>
   );
 };

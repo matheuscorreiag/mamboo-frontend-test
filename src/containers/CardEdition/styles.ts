@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 export const CardEditTextArea = styled.textarea`
   width: 90%;
-  height: 75%;
+  height: 50%;
   font-size: 12px;
   border-radius: 14px;
   margin: 10px 0px 0px 5px;

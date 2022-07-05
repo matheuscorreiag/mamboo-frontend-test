@@ -1,19 +1,22 @@
 import styled from "styled-components";
+import { BoardTileCreateCardButtonProps } from ".";
 
-export const Container = styled.div`
+interface ContainerProps extends Partial<BoardTileCreateCardButtonProps> {}
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 5px;
   margin-top: 10px;
+  display: ${(props) => (props.isCreating ? "none" : "flex")};
 `;
 export const CreateCardLabel = styled.label`
   font-size: 0.9rem;
   cursor: pointer;
 `;
 
-export const CreateCardButton = styled.button`
+export const CreateCardButton = styled.button<BoardTileCreateCardButtonProps>`
   cursor: pointer;
   border-radius: 14px;
   display: flex;

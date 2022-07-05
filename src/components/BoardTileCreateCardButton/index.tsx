@@ -3,16 +3,17 @@ import React from "react";
 
 import { Container, CreateCardButton, CreateCardLabel } from "./styles";
 
-interface BoardTileCreateCardButtonProps {
+export interface BoardTileCreateCardButtonProps {
   onClick: () => void;
+  isCreating: boolean;
 }
 
 export const BoardTileCreateCardButton: React.FC<
   BoardTileCreateCardButtonProps
-> = ({ onClick }) => {
+> = ({ onClick, isCreating }) => {
   return (
-    <Container onClick={onClick}>
-      <CreateCardButton onClick={() => console.log("clicado")}>
+    <Container isCreating={isCreating}>
+      <CreateCardButton onClick={onClick} isCreating={isCreating}>
         <Plus />
         <CreateCardLabel>Add a new card</CreateCardLabel>
       </CreateCardButton>

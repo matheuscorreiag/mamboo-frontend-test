@@ -10,14 +10,26 @@ import { BoardHeaderContainer, CardsContainer, Container } from "./styles";
 interface BoardTileProps {
   title: string;
   tasks: CardState[];
+  status: string;
 }
 
-export const BoardTile: React.FC<BoardTileProps> = ({ title, tasks }) => {
+export const BoardTile: React.FC<BoardTileProps> = ({
+  title,
+  tasks,
+  status,
+}) => {
   const [isCreatingCard, setIsCreatingCard] = useState(false);
+  const [key, setKey] = useState(0);
 
   const handleCreateCard = () => {
     setIsCreatingCard(true);
   };
+
+  const handleCloseCreateCard = () => {
+    setIsCreatingCard(false);
+    setKey(key + 1);
+  };
+
   return (
     <Container>
       <BoardHeaderContainer>
@@ -35,9 +47,17 @@ export const BoardTile: React.FC<BoardTileProps> = ({ title, tasks }) => {
               />
             );
           })}
-        <BoardTileHiddenCard isCreating={isCreatingCard} />
+        <BoardTileHiddenCard
+          isCreating={isCreatingCard}
+          closeCard={handleCloseCreateCard}
+          createCardType={status}
+          key={key}
+        />
       </CardsContainer>
-      <BoardTileCreateCardButton onClick={handleCreateCard} />
+      <BoardTileCreateCardButton
+        onClick={handleCreateCard}
+        isCreating={isCreatingCard}
+      />
     </Container>
   );
 };

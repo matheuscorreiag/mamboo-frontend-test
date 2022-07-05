@@ -8,7 +8,7 @@ export const CardEditTextArea = styled.textarea`
   height: 75%;
   font-size: 12px;
   border-radius: 14px;
-  margin: 20px 5px;
+  margin: 10px 0px 0px 5px;
   padding: 5px;
 
   outline: solid 3px #e6e6e6;

@@ -15,8 +15,16 @@ export const Card: React.FC<CardProps> = ({ cardId, description }) => {
 
   return (
     <Container isEditing={isEditing}>
-      <CardEditButton cardId={cardId} handleIsEditing={() => setIsEditing(!isEditing)} isEditing={isEditing} />
-      <CardDescription description={description} isEditing={isEditing} cardId={cardId}  onSaveOrDelete={() => setIsEditing(false)}/>
+      <CardEditButton
+        handleIsEditing={() => setIsEditing(!isEditing)}
+        isEditing={isEditing}
+      />
+      <CardDescription
+        description={description}
+        isEditing={isEditing}
+        cardId={cardId}
+        onSaveOrDelete={() => setIsEditing(false)}
+      />
     </Container>
   );
 };

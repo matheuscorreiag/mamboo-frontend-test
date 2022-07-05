@@ -8,7 +8,7 @@ import { fetchTasks } from "../../store/card/actions";
 import GlobalStyle from "../../styles/themes/globalStyle";
 import { AppContainer } from "./styles";
 
-export const App: React.FC = () => {
+export const InitialPage: React.FC = () => {
   const { theme } = useContext(ThemeContext);
 
   const dispatch = useAppDispatch();

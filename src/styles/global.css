@@ -20,7 +20,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  padding: 10px
+}
 /*-* Custom Scroll style *-*/
 
 ::-webkit-scrollbar {

@@ -8,12 +8,14 @@ import { CardEditTextArea, Container } from "./styles";
 
 interface CardEdition {
   cardId: string;
+  oldDescription: string;
   onSaveOrDelete: () => void;
 }
 
 export const CardEdition: React.FC<CardEdition> = ({
   cardId,
   onSaveOrDelete,
+  oldDescription,
 }) => {
   const [description, setDescription] = useState("");
 
@@ -31,7 +33,9 @@ export const CardEdition: React.FC<CardEdition> = ({
 
   return (
     <Container>
-      <CardEditTextArea onChange={(e) => setDescription(e.target.value)} />
+      <CardEditTextArea onChange={(e) => setDescription(e.target.value)}>
+        {oldDescription}
+      </CardEditTextArea>
       <CardEditSaveDeleteButtons
         onSaveEdit={handleSaveEdit}
         onDeleteCard={handleDeleteCard}

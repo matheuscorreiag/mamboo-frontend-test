@@ -32,7 +32,7 @@ export const CardDescription: React.FC<CardDescriptionProps> = ({
 
       {editing && (
         <>
-          <CardEdition cardId={cardId} onSaveOrDelete={handleSaveOrDelete} />
+          <CardEdition cardId={cardId} onSaveOrDelete={handleSaveOrDelete} oldDescription={description} />
         </>
       )}
     </>

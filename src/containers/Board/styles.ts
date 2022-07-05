@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: grid;
   gap: 20px;
-  margin-top: 50px;
+  margin: 20px 0px;
 
   @media (min-width: 768px) {
     display: grid;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const DeleteButtonContainer = styled.button`
   background-color: red;
@@ -10,6 +10,8 @@ export const DeleteButtonContainer = styled.button`
   border: 0;
   outline: none;
   color: #fff;
+  width: 80px;
+  height: 50px;
 
   :hover {
     background-color: #6b0d0d;

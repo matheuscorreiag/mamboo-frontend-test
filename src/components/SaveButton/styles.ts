@@ -1,8 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div`
-
-`;
+export const Container = styled.div``;
 export const SaveButtonContainer = styled.button`
   background-color: #3ec762;
 
@@ -13,6 +11,8 @@ export const SaveButtonContainer = styled.button`
   border: 0;
   outline: none;
   color: #fff;
+  width: 80px;
+  height: 50px;
 
   :hover {
     background-color: #16732e;

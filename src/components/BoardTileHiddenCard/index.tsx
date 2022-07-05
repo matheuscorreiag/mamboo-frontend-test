@@ -39,8 +39,6 @@ export const BoardTileHiddenCard: React.FC<BoardTileHiddenCardProps> = ({
     status: createCardType,
   });
 
-  console.log(data.description);
-
   const clearState = () => {
     setData(initialState);
   };

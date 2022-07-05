@@ -7,7 +7,7 @@ export const cardSlice = createSlice({
   name: "card",
   initialState,
   reducers: {
-    addCard: (state, action) => {
+    addCards: (state, action) => {
       return [...state, ...action.payload];
     },
     getCards: (state) => {
@@ -23,6 +23,9 @@ export const cardSlice = createSlice({
     },
     deleteCard: (state, action) => {
       return state.filter((card) => card.id !== action.payload);
+    },
+    addCard: (state, action) => {
+      return [...state, action.payload];
     },
   },
 });

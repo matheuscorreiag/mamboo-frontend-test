@@ -15,7 +15,7 @@ export const fetchTasks = () => {
   return async (dispatch: AppDispatch) => {
     return await api
       .get("tasks")
-      .then((res) => dispatch(actions.addCard(res.data)));
+      .then((res) => dispatch(actions.addCards(res.data)));
   };
 };
 

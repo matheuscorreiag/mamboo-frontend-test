@@ -16,8 +16,8 @@ export const CardEditButton: React.FC<CardEditButtonProps> = ({
 
   return (
     <Container>
-      <EditIcon editing={isEditing} onClick={toggleIsEditing} />
-      <CloseEditIcon editing={isEditing} onClick={toggleIsEditing} />
+      <EditIcon $editing={isEditing} onClick={toggleIsEditing} />
+      <CloseEditIcon $editing={isEditing} onClick={toggleIsEditing} />
     </Container>
   );
 };

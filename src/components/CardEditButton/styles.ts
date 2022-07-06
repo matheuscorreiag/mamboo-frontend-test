@@ -2,7 +2,7 @@ import { Pencil, X } from "phosphor-react";
 import styled from "styled-components";
 
 interface EditButtonsProps {
-  editing: boolean;
+  $editing: boolean;
 }
 export const Container = styled.div`
   cursor: pointer;
@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const EditIcon = styled(Pencil)<EditButtonsProps>`
-  display: ${(props) => (props.editing ? "none" : "block")};
+  display: ${(props) => (props.$editing ? "none" : "block")};
   position: absolute;
   right: 10px;
   top: 10px;
@@ -21,7 +21,7 @@ export const EditIcon = styled(Pencil)<EditButtonsProps>`
   }
 `;
 export const CloseEditIcon = styled(X)<EditButtonsProps>`
-  display: ${(props) => (props.editing ? "block" : "none")};
+  display: ${(props) => (props.$editing ? "block" : "none")};
   z-index: 100;
   right: 10px;
   top: 10px;
